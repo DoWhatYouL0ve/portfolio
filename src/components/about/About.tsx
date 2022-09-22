@@ -1,7 +1,8 @@
 import React from "react";
+import indexStyles from "../../assets/reusableCSS.module.css";
 
 export const About = () => {
     return <>
-        <div>About</div>
+        <div className={indexStyles.widthLG}>About</div>
     </>
 }

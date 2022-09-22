@@ -1,0 +1,36 @@
+/*Re-usable styles*/
+
+.widthLG {
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid red;
+    display: flex;
+}
+.widthMD {
+    width: 86%;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+.widthSM {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+
+.buttonStyles{
+    background: #FF9000;
+    color: #fff;
+    border: 2px solid #FF9000;
+    cursor: pointer;
+    margin: 20px;
+    font-family: "Space Mono", Arial, serif;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 30px;
+    padding: 8px 20px;
+}
+
+.buttonStyles:hover{
+    transition: 0.5s;
+    scale: 1.1;
+}
