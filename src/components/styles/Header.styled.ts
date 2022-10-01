@@ -1,49 +1,40 @@
-.bg {
-    min-height: 100vh;
-    min-width: 100%;
-    background: linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url("mainBG.jpg");
-}
+import styled from 'styled-components'
+import {Container} from "./Container.styled";
 
-.containerHeight {
-    min-height: 100vh;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
-.headerDataContainer{
+export const HeaderContainer = styled(Container)`
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-}
-
-.photo{
-    border: 1px solid orangered;
+  .photo{
+    border: 1px solid #FF9000;
     border-radius: 50%;
     width: 300px;
     height: 300px;
     margin: 50px auto 100px;
     opacity: 1;
-}
+  }
 
-.info{
+  .info{
     margin-bottom: 50px;
     border: 1px solid green;
-}
+  }
 
-.info h1{
+  .info h1{
     font-family: "Kaushan Script", cursive;
     margin-bottom: 30px;
     font-size: 50px;
     line-height: 1.3;
     font-weight: 300;
     transform: rotate(-5deg)
-}
+  }
 
-.info h3{
+  .info h3{
     font-size: 16px;
     font-family: "Space Mono", Arial, serif;
     font-weight: 400;
-}
+  }
 
-.button{
-
-}
+`
