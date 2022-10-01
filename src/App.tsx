@@ -7,7 +7,7 @@ import {Skills} from "./components/skills/Skills";
 import {Portfolio} from './components/portfolio/Portfolio';
 import {GlobalStyles} from "./components/styles/common/ClobalStyles";
 import {ThemeProvider} from "styled-components";
-import img from "./components/styles/mainBG.jpg";
+import img from "./components/styles/common/mainBG.jpg";
 
 const theme = {
     colors: {

@@ -1,6 +1,6 @@
 import React from "react";
 import {StyledBackground} from "../styles/common/Background.styled";
-import {PortfolioContainer} from "../styles/Portfolio.styled";
+import {PortfolioContainer} from "./Portfolio.styled";
 
 export const Portfolio = () => {
     return <>

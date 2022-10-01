@@ -1,6 +1,6 @@
 import React from "react";
 import {StyledBackground} from "../styles/common/Background.styled";
-import {ContactsContainer} from "../styles/Contacts.styled";
+import {ContactsContainer} from "./Contacts.styled";
 
 export const Contacts = () => {
     return <>

@@ -1,7 +1,7 @@
 import React from "react";
-import photo from './../../assets/photo.webp'
+import photo from './photo.webp'
 import {StyledBackground} from "../styles/common/Background.styled";
-import {HeaderContainer} from "../styles/Header.styled";
+import {HeaderContainer} from "./Header.styled";
 import {StyledButton} from "../styles/common/Button.styled";
 
 export const Header = () => {

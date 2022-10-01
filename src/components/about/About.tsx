@@ -1,14 +1,28 @@
 import React from "react";
-import { StyledBackground } from "../styles/common/Background.styled";
-import {AboutContainer} from "../styles/About.styled";
+import {AboutContainer, AboutStyledBackground} from "./About.styled";
+import {P} from "../styles/common/Paragraph.styled";
+import {H2} from "../styles/common/Header2.styled";
 
 
 export const About = () => {
     return <>
-        <StyledBackground bg={'white'}>
+        <AboutStyledBackground bg={'white'}>
             <AboutContainer>
-                <div>About</div>
+                <div>
+                    <H2>A LITTLE <span>ABOUT ME</span></H2>
+                    <P> Hello! My name is <b>William Ross</b>. Currently, I am living in Spain, Valencia.
+                        I am a hardworking and goal-oriented person with a great motivation
+                        to achieve high results and become a highly qualified professional. I am
+                        fluent in several foreign languages and constantly growing in this direction. You can always rely
+                        on me. I am a responsible and communicative person with a positive attitude to the
+                        world.
+                    </P>
+                    <P>
+                        My main goal at work is to do more than anyone expects from me and grow
+                        as a professional together with the company.
+                    </P>
+                </div>
             </AboutContainer>
-        </StyledBackground>
+        </AboutStyledBackground>
     </>
 }
