@@ -5,7 +5,7 @@ import {Contacts} from "./components/contacts/Contacts";
 import {Footer} from "./components/footer/Footer";
 import {Skills} from "./components/skills/Skills";
 import {Portfolio} from './components/portfolio/Portfolio';
-import {GlobalStyles} from "./components/styles/ClobalStyles";
+import {GlobalStyles} from "./components/styles/common/ClobalStyles";
 import {ThemeProvider} from "styled-components";
 import img from "./components/styles/mainBG.jpg";
 

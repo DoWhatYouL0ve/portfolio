@@ -1,7 +1,13 @@
 import React from "react";
+import {StyledBackground} from "../styles/common/Background.styled";
+import {SkillsContainer} from "../styles/Skills.styled";
 
 export const Skills = () => {
     return <>
-        <div>Skills</div>
+        <StyledBackground bg={'primary'}>
+            <SkillsContainer>
+                <div>Skills</div>
+            </SkillsContainer>
+        </StyledBackground>
     </>
 }

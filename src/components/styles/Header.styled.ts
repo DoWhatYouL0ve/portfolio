@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Container} from "./Container.styled";
+import {Container} from "./common/Container.styled";
 
 
 export const HeaderContainer = styled(Container)`

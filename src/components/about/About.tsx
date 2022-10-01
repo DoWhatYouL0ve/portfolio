@@ -1,8 +1,14 @@
 import React from "react";
+import { StyledBackground } from "../styles/common/Background.styled";
+import {AboutContainer} from "../styles/About.styled";
 
 
 export const About = () => {
     return <>
-        <div>About</div>
+        <StyledBackground bg={'white'}>
+            <AboutContainer>
+                <div>About</div>
+            </AboutContainer>
+        </StyledBackground>
     </>
 }
