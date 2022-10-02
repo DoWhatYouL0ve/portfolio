@@ -7,7 +7,7 @@ export const AboutStyledBackground = styled(StyledBackground)`
 `
 
 export const AboutContainer = styled(Container)`
-  padding: 100px 50px;
+  padding: 100px 0;
   justify-content: center;
   align-items: center;
   text-align: center;

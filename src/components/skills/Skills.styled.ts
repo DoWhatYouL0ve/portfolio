@@ -3,8 +3,16 @@ import {Container} from "../styles/common/Container.styled";
 
 
 export const SkillsContainer = styled(Container)`
-  padding: 100px 50px;
+  min-height: 100vh;
+  padding: 100px 0;
   justify-content: center;
-  align-items: center;
   text-align: center;
+`
+
+export const TechnicalSkillsStyledBox = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
 `

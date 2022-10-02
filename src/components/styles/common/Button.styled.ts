@@ -11,6 +11,9 @@ export const StyledButton = styled.button`
     font-weight: 400;
     border-radius: 30px;
     padding: 8px 20px;
+  a {
+    color: ${({theme})=>theme.colors.whiteTextColor};
+  }
 
   &:hover{
     transition: 0.5s;

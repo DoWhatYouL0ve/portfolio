@@ -13,8 +13,8 @@ const theme = {
     colors: {
         headingTextColor: '#000',
         primaryTextColor: '#4d4d4d',
-        secondaryTextColor: '#bfbfbf',
-        whiteTextColor: '#fff'
+        secondaryTextColor: 'rgba(255, 255, 255, 0.7)',
+        whiteTextColor: '#fff',
 
     },
     bg: {

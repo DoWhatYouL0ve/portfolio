@@ -5,7 +5,7 @@ export const Footer = () => {
     return <>
         <FooterStyledBackground bg={'white'}>
             <FooterContainer>
-                <div>Footer</div>
+                <div>All Rights Reserved. © 2022. Designed by <span>William Ross</span></div>
             </FooterContainer>
         </FooterStyledBackground>
     </>
