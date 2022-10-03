@@ -6,6 +6,7 @@ interface PropsType {
 
 export const H2 = styled.h2<PropsType>`
   padding-bottom: 30px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   text-decoration: underline dotted;
   text-underline-offset: 8px;
