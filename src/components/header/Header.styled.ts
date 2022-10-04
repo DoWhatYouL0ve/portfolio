@@ -32,7 +32,7 @@ export const HeaderContainer = styled(Container)`
   }
 
   .info h3{
-    font-size: 16px;
+    font-size: 25px;
     font-family: "Space Mono", Arial, serif;
     font-weight: 400;
   }

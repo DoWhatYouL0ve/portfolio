@@ -12,25 +12,25 @@ export const MessengersBoxStyled = styled.div`
     margin: 10px 0 0;
     font-size: 50px;
   }
-  .sendAMessage {
-    background: ${({theme})=>theme.bg.primaryBgColor};
-    color: ${({theme})=>theme.colors.whiteTextColor};
-    border: 2px solid ${({theme})=>theme.colors.whiteTextColor};
-    cursor: pointer;
-    margin: 20px;
-    font-family: "Space Mono", Arial, serif;
-    font-size: 1rem;
-    font-weight: 400;
-    border-radius: 30px;
-    padding: 8px 20px;
-    a {
-      color: ${({theme})=>theme.colors.whiteTextColor};
-    }
+`
 
-    &:hover{
-      transition: 0.5s;
-      scale: 1.1;
-    }
+export const SendMessageButton = styled.div`
+  background: ${({theme})=>theme.bg.primaryBgColor};
+  color: ${({theme})=>theme.colors.whiteTextColor};
+  border: 2px solid ${({theme})=>theme.colors.whiteTextColor};
+  cursor: pointer;
+  margin: 20px;
+  font-family: "Space Mono", Arial, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 30px;
+  padding: 8px 20px;
+  a {
+    color: ${({theme})=>theme.colors.whiteTextColor};
+  }
+  &:hover{
+    transition: 0.5s;
+    scale: 1.1;
   }
 `
 
@@ -51,7 +51,7 @@ export const MessengerBox = (props: PropsType) => {
             <MessengersBoxStyled>
                 <div className={'messengerIcon'}>{<props.item.icon/>}</div>
                 <H3>{props.item.title}</H3>
-                <div className={'sendAMessage'}><a href={props.item.description} target={'_blank'} rel="noopener noreferrer">Send a message</a></div>
+                <SendMessageButton><a href={props.item.description} target={'_blank'} rel="noopener noreferrer">Send a message</a></SendMessageButton>
             </MessengersBoxStyled>
         </>
     )

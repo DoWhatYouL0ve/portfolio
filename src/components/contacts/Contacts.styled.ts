@@ -13,7 +13,6 @@ export const ContactsContainer = styled(Container)`
 `
 
 export const ContactsFormContainer = styled.div`
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,7 +20,6 @@ export const ContactsFormContainer = styled.div`
 export const ContactsMessengers = styled.div`
   border: 1px solid white;
   width: 100%;
-  margin-bottom: 100px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

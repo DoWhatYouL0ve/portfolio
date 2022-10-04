@@ -12,6 +12,8 @@ export const FooterContainer = styled(Container)`
   align-items: center;
   text-align: center;
   span {
-    color: ${({theme})=>theme.bg.primaryBgColor}
+    color: ${({theme})=>theme.bg.primaryBgColor};
+    font-family: "Kaushan Script", cursive;
+    font-weight: bold;
   }
 `
