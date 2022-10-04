@@ -18,7 +18,7 @@ export const Header = () => {
                             <h3>Front-end Developer</h3>
                         </div>
                         <StyledButton><a href={cv} download={'CV_William_Ross.pdf'}>Download CV</a></StyledButton>
-                        <StyledButton>Contact Me</StyledButton>
+                        <StyledButton><a href={'#contact'}>Contact Me</a></StyledButton>
                     </div>
                 </HeaderContainer>
             </StyledBackground>
