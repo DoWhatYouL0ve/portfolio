@@ -8,6 +8,7 @@ import {Portfolio} from './components/portfolio/Portfolio';
 import {GlobalStyles} from "./components/styles/common/ClobalStyles";
 import {ThemeProvider} from "styled-components";
 import img from "./components/styles/common/mainBG.jpg";
+import {ButtonOnTop} from "./components/buttonOnTop/ButtonOnTop";
 
 const theme = {
     colors: {
@@ -29,6 +30,7 @@ function App() {
         <div>
             <ThemeProvider theme={theme}>
                 <GlobalStyles/>
+                <ButtonOnTop/>
                 <Header/>
                 <About/>
                 <Skills/>

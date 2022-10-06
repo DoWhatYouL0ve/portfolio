@@ -1,43 +1,50 @@
 import React from 'react';
-import { useFormik } from 'formik';
+import {useFormik} from 'formik';
 import styled from "styled-components";
+import * as emailjs from '@emailjs/browser'
+import * as Yup from 'yup'
 
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
+
   input {
     width: 100%;
     margin-bottom: 30px;
     padding: 10px;
     background: transparent;
-    color: ${({theme})=>theme.colors.whiteTextColor};
-    border: 2px solid ${({theme})=>theme.colors.whiteTextColor};
+    color: ${({theme}) => theme.colors.whiteTextColor};
+    border: 2px solid ${({theme}) => theme.colors.whiteTextColor};
     border-radius: 30px;
+
     ::placeholder {
       opacity: 1;
-      color: ${({theme})=>theme.colors.secondaryTextColor};
+      color: ${({theme}) => theme.colors.secondaryTextColor};
     }
   }
+
   textarea {
     width: 100%;
     height: 120px;
     padding: 10px;
     background: transparent;
-    color: ${({theme})=>theme.colors.whiteTextColor};
-    border: 2px solid ${({theme})=>theme.colors.whiteTextColor};
+    color: ${({theme}) => theme.colors.whiteTextColor};
+    border: 2px solid ${({theme}) => theme.colors.whiteTextColor};
     border-radius: 30px;
     resize: none;
     margin-bottom: 30px;
+
     ::placeholder {
       opacity: 1;
-      color: ${({theme})=>theme.colors.secondaryTextColor};
+      color: ${({theme}) => theme.colors.secondaryTextColor};
     }
   }
+
   button {
     width: 208px;
-    background: ${({theme})=>theme.colors.whiteTextColor};
-    color: ${({theme})=>theme.bg.primaryBgColor};
-    border: 2px solid ${({theme})=>theme.colors.whiteTextColor};
+    background: ${({theme}) => theme.colors.whiteTextColor};
+    color: ${({theme}) => theme.bg.primaryBgColor};
+    border: 2px solid ${({theme}) => theme.colors.whiteTextColor};
     cursor: pointer;
     margin: 20px;
     font-family: "Space Mono", Arial, serif;
@@ -45,10 +52,12 @@ const StyledForm = styled.form`
     font-weight: 400;
     border-radius: 30px;
     padding: 8px 20px;
+
     a {
-      color: ${({theme})=>theme.colors.whiteTextColor};
+      color: ${({theme}) => theme.colors.whiteTextColor};
     }
-    &:hover{
+
+    &:hover {
       transition: 0.5s;
       scale: 1.1;
     }
@@ -56,6 +65,7 @@ const StyledForm = styled.form`
 `
 
 export const ContactForm = () => {
+
     const formik = useFormik({
         initialValues: {
             firstName: '',
@@ -63,10 +73,25 @@ export const ContactForm = () => {
             email: '',
             message: '',
         },
+        validationSchema: Yup.object({
+            firstName: Yup.string()
+                .required('* Name field is required'),
+            lastName: Yup.string()
+                .required('* Subject field is required'),
+            email: Yup.string().email('Invalid email address')
+                .required('* Email field is required'),
+            message: Yup.string().required('* Message field is required')
+        }),
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            emailjs.send('service_ximbg4k', 'template_x9kfufu',
+                values, 'HZWxApmvXM-gVygeN')
+                .then(() => {
+
+                    console.log('email sent');
+                });
         },
     });
+
     return (
         <StyledForm onSubmit={formik.handleSubmit}>
             <input

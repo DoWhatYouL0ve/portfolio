@@ -8,7 +8,7 @@ import cv from './cv.pdf'
 
 export const Header = () => {
     return (
-        <header>
+        <header id={'top'}>
             <StyledBackground bg={'header'}>
                 <HeaderContainer>
                     <div>
