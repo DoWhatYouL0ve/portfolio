@@ -7,7 +7,7 @@ import {H2} from "../styles/common/Header2.styled";
 export const About = () => {
     return <>
         <AboutStyledBackground bg={'white'}>
-            <AboutContainer>
+            <AboutContainer id={'about'}>
                 <div>
                     <H2>A LITTLE <span>ABOUT ME</span></H2>
                     <P> Hello! My name is <b>William Ross</b>. Currently, I am living in Spain, Valencia.

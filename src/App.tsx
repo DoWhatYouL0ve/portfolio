@@ -5,10 +5,11 @@ import {Contacts} from "./components/contacts/Contacts";
 import {Footer} from "./components/footer/Footer";
 import {Skills} from "./components/skills/Skills";
 import {Portfolio} from './components/portfolio/Portfolio';
-import {GlobalStyles} from "./components/styles/common/ClobalStyles";
+import {GlobalStyles} from "./components/styles/common/GlobalStyles";
 import {ThemeProvider} from "styled-components";
 import img from "./components/styles/common/mainBG.jpg";
 import {ButtonOnTop} from "./components/buttonOnTop/ButtonOnTop";
+import {NavBar} from "./components/nav/NavBar";
 
 const theme = {
     colors: {
@@ -37,6 +38,7 @@ function App() {
                 <Portfolio/>
                 <Contacts/>
                 <Footer/>
+                <NavBar/>
             </ThemeProvider>
         </div>
     );

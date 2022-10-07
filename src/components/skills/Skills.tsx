@@ -18,7 +18,7 @@ export const Skills = () => {
 
     return <>
         <StyledBackground bg={'primary'}>
-            <SkillsContainer>
+            <SkillsContainer id={'skills'}>
                 <div>
                     <H2 white={true}>Skills</H2>
                     <div>

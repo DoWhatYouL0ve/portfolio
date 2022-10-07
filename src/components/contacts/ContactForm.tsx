@@ -41,7 +41,7 @@ const StyledForm = styled.form`
   }
 
   button {
-    width: 208px;
+    width: 142px;
     background: ${({theme}) => theme.colors.whiteTextColor};
     color: ${({theme}) => theme.bg.primaryBgColor};
     border: 2px solid ${({theme}) => theme.colors.whiteTextColor};
@@ -83,10 +83,9 @@ export const ContactForm = () => {
             message: Yup.string().required('* Message field is required')
         }),
         onSubmit: values => {
-            emailjs.send('service_ximbg4k', 'template_x9kfufu',
-                values, 'HZWxApmvXM-gVygeN')
+            emailjs.send(`${process.env.REACT_APP_FORMIK_SERVICE_ID}`, `${process.env.REACT_APP_FORMIK_TEMPLATE_ID}`,
+                values, `${process.env.REACT_APP_FORMIK_USER_ID}`)
                 .then(() => {
-
                     console.log('email sent');
                 });
         },

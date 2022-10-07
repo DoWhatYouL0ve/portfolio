@@ -19,12 +19,13 @@ export const SendMessageButton = styled.div`
   color: ${({theme})=>theme.colors.whiteTextColor};
   border: 2px solid ${({theme})=>theme.colors.whiteTextColor};
   cursor: pointer;
-  margin: 20px;
+  margin: 20px auto;
   font-family: "Space Mono", Arial, serif;
   font-size: 1rem;
   font-weight: 400;
   border-radius: 30px;
-  padding: 8px 20px;
+  padding: 8px;
+  width: 142px;
   a {
     color: ${({theme})=>theme.colors.whiteTextColor};
   }

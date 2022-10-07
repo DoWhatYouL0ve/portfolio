@@ -18,7 +18,7 @@ export const Portfolio = () => {
 
     return <>
         <StyledBackground bg={'white'}>
-            <PortfolioContainer>
+            <PortfolioContainer id={'portfolio'}>
                 <div>
                     <H2>Portfolio</H2>
                     <PortfolioBox>

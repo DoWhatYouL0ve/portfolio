@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const StyledButton = styled.button`
+    width: 142px;
     background: ${({theme})=>theme.bg.primaryBgColor};
     color: ${({theme})=>theme.colors.whiteTextColor};
     border: 2px solid ${({theme})=>theme.bg.primaryBgColor};

@@ -1,18 +1,16 @@
 import styled from 'styled-components'
 import {Container} from "../styles/common/Container.styled";
 
-
 export const HeaderContainer = styled(Container)`
   min-height: 100vh;
   justify-content: center;
   align-items: center;
   text-align: center;
-
   .photo{
-    border: 1px solid #FF9000;
+    border: 1px solid ${({theme}) => theme.bg.whiteBgColor};
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
     margin: 50px auto 100px;
     opacity: 1;
   }

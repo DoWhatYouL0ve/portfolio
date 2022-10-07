@@ -50,8 +50,8 @@ export const PortfolioBoxItem = (props: PropsType) => {
             <PortfolioBoxItemStyled>
                 <div className={'project'} style={{background: `linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(${props.item.img})`, backgroundSize: "cover"}}>
                     <div className={'demonstrationButtons'}>
-                        <StyledButton><a href={props.item.demo} target="_blank" rel="noopener noreferrer">Demo</a></StyledButton>
-                        <StyledButton><a href={props.item.code} target="_blank" rel="noopener noreferrer">Code</a></StyledButton>
+                        <StyledButton style={{width: '90px'}}><a href={props.item.demo} target="_blank" rel="noopener noreferrer">Demo</a></StyledButton>
+                        <StyledButton style={{width: '90px'}}><a href={props.item.code} target="_blank" rel="noopener noreferrer">Code</a></StyledButton>
                     </div>
                 </div>
                 <div>

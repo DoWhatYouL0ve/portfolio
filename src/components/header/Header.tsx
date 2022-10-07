@@ -1,5 +1,5 @@
 import React from "react";
-import photo from './photo.webp'
+import photo from './cv.jpg'
 import {StyledBackground} from "../styles/common/Background.styled";
 import {HeaderContainer} from "./Header.styled";
 import {StyledButton} from "../styles/common/Button.styled";
@@ -12,7 +12,7 @@ export const Header = () => {
             <StyledBackground bg={'header'}>
                 <HeaderContainer>
                     <div>
-                        <div><img src={photo} alt="" className={'photo'}/></div>
+                        <div style={{backgroundImage: `url(${photo})`, backgroundPosition: 'center top'}} className={'photo'}></div>
                         <div className={'info'}>
                             <h1>- WILLIAM ROSS -</h1>
                             <h3>Front-end Developer</h3>
