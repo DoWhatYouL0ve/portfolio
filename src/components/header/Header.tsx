@@ -12,7 +12,7 @@ export const Header = () => {
             <StyledBackground bg={'header'}>
                 <HeaderContainer>
                     <div>
-                        <div style={{backgroundImage: `url(${photo})`, backgroundPosition: 'center top'}} className={'photo'}></div>
+                        <div style={{backgroundImage: `url(${photo})`, backgroundPosition: 'center top'}} className={'photo'}/>
                         <div className={'info'}>
                             <h1>- WILLIAM ROSS -</h1>
                             <h3>Front-end Developer</h3>
