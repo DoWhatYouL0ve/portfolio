@@ -11,7 +11,7 @@ export const Portfolio = () => {
 
     const portfolio = [
         {id: '1', title: 'Social Network', description: 'This is a test big project with API, Redux, Typescript and lots of funtionality. To log in please ask me for the crredentials first.', img: social, code: 'https://github.com/DoWhatYouL0ve/social_network', demo: 'https://dowhatyoul0ve.github.io/social_network/'},
-        {id: '21', title: 'To Do List', description: 'This is a test big project with API, Redux, Typescript and Unit testing. To log in please ask me for the crredentials first.', img: todolist, code: 'https://github.com/DoWhatYouL0ve/to_do_list.v2', demo: ''},
+        {id: '2', title: 'To Do List', description: 'This is a test big project with API, Redux, Typescript and Unit testing. To log in please ask me for the crredentials first.', img: todolist, code: 'https://github.com/DoWhatYouL0ve/to_do_list.v2', demo: ''},
         {id: '3', title: 'Counter', description: 'This is my first small project with different features', img: counter, code: 'https://github.com/DoWhatYouL0ve/counter', demo: 'https://dowhatyoul0ve.github.io/counter/'},
         {id: '4', title: 'Test project', description: 'some text', img: '', code: '', demo: ''}
     ]

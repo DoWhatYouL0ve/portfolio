@@ -7,6 +7,9 @@ export const SkillsContainer = styled(Container)`
   padding: 100px 0;
   justify-content: center;
   text-align: center;
+  @media screen and (max-width: 1024px) {
+    min-height: 100%;
+  }
   @media screen and (max-width: 768px) {
     padding: 40px 0;
   }

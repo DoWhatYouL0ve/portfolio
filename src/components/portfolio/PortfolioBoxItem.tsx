@@ -40,7 +40,81 @@ const PortfolioBoxItemStyled = styled.div`
     font-family: "Kaushan Script", cursive;
     font-weight: bold;
   }
-  
+  @media screen and (max-width: 1024px) {
+    width: 380px;
+    height: 280px;
+    .project {
+      height: 155px;
+      .demonstrationButtons {
+        top: 33%;
+        left: 15%;
+      }
+    }
+    H3 {
+      margin: 12px;
+    }
+    P {
+      font-size: 14px;
+      line-height: 1.2;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0 auto 50px;
+    width: 500px;
+    height: 400px;
+    .project {
+      height: 250px;
+      .demonstrationButtons {
+        top: 33%;
+        left: 25%;
+      }
+    }
+    H3 {
+      margin: 20px;
+    }
+    P {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    margin: 0 auto 50px;
+    width: 470px;
+    height: 300px;
+    .project {
+      height: 155px;
+      .demonstrationButtons {
+        top: 33%;
+        left: 25%;
+      }
+    }
+    H3 {
+      margin: 20px;
+    }
+    P {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    margin: 0 auto 20px;
+    width: 280px;
+    height: 280px;
+    .project {
+      height: 130px;
+      .demonstrationButtons {
+        top: 33%;
+        left: 4%;
+      }
+    }
+    H3 {
+      margin: 5px;
+    }
+    P {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
 `
 
 export const PortfolioBoxItem = (props: PropsType) => {

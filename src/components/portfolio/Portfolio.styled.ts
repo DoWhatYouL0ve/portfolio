@@ -7,6 +7,10 @@ export const PortfolioContainer = styled(Container)`
   padding: 100px 0;
   justify-content: center;
   text-align: center;
+  @media screen and (max-width: 1024px) {
+    padding: 40px 0;
+    min-height: 100%;
+  }
 `
 
 export const PortfolioBox = styled.div`
@@ -14,4 +18,7 @@ export const PortfolioBox = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `

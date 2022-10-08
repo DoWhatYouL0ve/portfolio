@@ -13,6 +13,7 @@ const StyledButtonOnTop = styled.div`
   background-color: ${({theme})=>theme.bg.primaryBgColor};
   text-align: center;
   padding-top: 5px;
+  z-index: 1;
   a {
     color: ${({theme})=>theme.colors.whiteTextColor};
     font-size: 30px;

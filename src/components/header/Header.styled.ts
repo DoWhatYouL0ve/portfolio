@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import {Container} from "../styles/common/Container.styled";
 
 export const HeaderContainer = styled(Container)`
-  min-height: 100vh;
+  padding: 100px 0;
   justify-content: center;
   align-items: center;
   text-align: center;
