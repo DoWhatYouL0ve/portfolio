@@ -11,9 +11,17 @@ export const FooterContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   text-align: center;
-  span {
+  span .markedText{
     color: ${({theme})=>theme.bg.primaryBgColor};
     font-family: "Kaushan Script", cursive;
     font-weight: bold;
+  }
+  .footerBlock {
+    display: inline;
+  }
+  @media screen and (max-width: 480px) {
+    .footerBlock {
+      display: block;
+    }
   }
 `

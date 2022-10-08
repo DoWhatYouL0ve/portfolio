@@ -5,7 +5,7 @@ export const Footer = () => {
     return <>
         <FooterStyledBackground bg={'white'}>
             <FooterContainer>
-                <div>All Rights Reserved. © 2022. Designed by <span>William Ross</span></div>
+                <div><div className={'footerBlock'}>All Rights Reserved. © 2022.</div> <span>Designed by <span className={'markedText'}>William Ross</span></span></div>
             </FooterContainer>
         </FooterStyledBackground>
     </>

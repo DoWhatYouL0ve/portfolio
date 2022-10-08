@@ -17,6 +17,9 @@ const StyledButtonOnTop = styled.div`
     color: ${({theme})=>theme.colors.whiteTextColor};
     font-size: 30px;
   }
+  @media screen and (max-width: 480px) {
+    right: 20px;
+  }
 `
 
 export const ButtonOnTop = () => {

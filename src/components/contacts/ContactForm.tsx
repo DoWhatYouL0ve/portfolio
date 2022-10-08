@@ -52,7 +52,6 @@ const StyledForm = styled.form`
     font-weight: 400;
     border-radius: 30px;
     padding: 8px 20px;
-
     a {
       color: ${({theme}) => theme.colors.whiteTextColor};
     }
@@ -60,6 +59,14 @@ const StyledForm = styled.form`
     &:hover {
       transition: 0.5s;
       scale: 1.1;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    button {
+      margin: 10px auto;
+    }
+    input, textarea {
+      margin-bottom: 15px;
     }
   }
 `
