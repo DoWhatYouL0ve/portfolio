@@ -9,7 +9,7 @@ export const About = () => {
         <AboutStyledBackground bg={'white'}>
             <AboutContainer id={'about'}>
                 <div>
-                    <H2>A LITTLE <span>ABOUT ME</span></H2>
+                    <H2><span className={'reverseTestColor'}>A LITTLE </span><span>ABOUT ME</span></H2>
                     <P> Hello! My name is <b>William Ross</b>. Currently, I am living in Spain, Valencia.
                         I am a hardworking and goal-oriented person with a great motivation
                         to achieve high results and become a highly qualified professional. I am

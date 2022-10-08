@@ -28,6 +28,9 @@ const StyledSkillBox = styled.div`
     font-size: 1.5em;
     line-height: 30px;
   }
+  @media screen and (max-width: 768px) {
+
+  }
 `
 
 export const SkillsBox = (props: PropsType) => {

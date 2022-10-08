@@ -14,5 +14,21 @@ export const AboutContainer = styled(Container)`
   b {
     font-family: "Kaushan Script", cursive;
   }
-  
+  .reverseTestColor {
+    color: ${({theme})=> theme.colors.headingTextColor};
+  }
+  @media screen and (max-width: 768px) {
+    padding: 40px 0;
+  }
+  @media screen and (max-width: 480px) {
+    H2 {
+      display: block;
+      span {
+        display: block;
+      }
+      .reverseTestColor {
+        margin-bottom: 10px;
+      }
+    }
+  }
 `
