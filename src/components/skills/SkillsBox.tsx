@@ -28,8 +28,11 @@ const StyledSkillBox = styled.div`
     font-size: 1.5em;
     line-height: 30px;
   }
-  @media screen and (max-width: 768px) {
-
+  @media screen and (max-width: 600px) {
+    width: 235px;
+  }
+  @media screen and (max-width: 480px) {
+    margin: 0 auto;
   }
 `
 
