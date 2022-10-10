@@ -28,7 +28,16 @@ const StyledForm = styled.form`
       border-style: dotted dashed solid double;
     }
   }
-
+  .inputBox {
+    position: relative;
+    .expandable.show {
+      position: absolute;
+      top: 9px;
+      right: 15px;
+      color: red;
+      font-size: 0.8rem;
+    }
+  }
   textarea {
     width: 100%;
     height: 120px;
@@ -91,55 +100,77 @@ export const ContactForm = () => {
         },
         validationSchema: Yup.object({
             firstName: Yup.string()
-                .required('* Name field is required'),
+                .required('* field is required'),
             lastName: Yup.string()
-                .required('* Subject field is required'),
+                .required('* field is required'),
             email: Yup.string().email('Invalid email address')
-                .required('* Email field is required'),
-            message: Yup.string().required('* Message field is required')
+                .required('* field is required'),
+            message: Yup.string().required('* field is required')
         }),
-        onSubmit: values => {
+        onSubmit: (values, { resetForm }) => {
             emailjs.send(`${process.env.REACT_APP_FORMIK_SERVICE_ID}`, `${process.env.REACT_APP_FORMIK_TEMPLATE_ID}`,
                 values, `${process.env.REACT_APP_FORMIK_USER_ID}`)
                 .then(() => {
                     console.log('email sent');
                 });
+            resetForm()
         },
     });
 
     return (
         <StyledForm onSubmit={formik.handleSubmit} data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="600">
-            <input
-                id="firstName"
-                name="firstName"
-                placeholder={'First name'}
-                type="text"
-                onChange={formik.handleChange}
-                value={formik.values.firstName}
-            />
-            <input
-                id="lastName"
-                name="lastName"
-                placeholder={'Last name'}
-                type="text"
-                onChange={formik.handleChange}
-                value={formik.values.lastName}
-            />
-            <input
-                id="email"
-                name="email"
-                placeholder={'Enter your email'}
-                type="email"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-            />
-            <textarea
-                id="message"
-                name="message"
-                placeholder={'Type your message here ...'}
-                onChange={formik.handleChange}
-                value={formik.values.message}
-            />
+            <div className={'inputBox'}>
+                <input
+                    id="firstName"
+                    name="firstName"
+                    placeholder={'First name'}
+                    type="text"
+                    onChange={formik.handleChange}
+                    value={formik.values.firstName}
+                />
+                <div className={`expandable ${formik.touched.firstName && formik.errors.firstName ? 'show' : ''}`}>
+                    {formik.errors.firstName}
+                </div>
+            </div>
+            <div className={'inputBox'}>
+                <input
+                    id="lastName"
+                    name="lastName"
+                    placeholder={'Last name'}
+                    type="text"
+                    onChange={formik.handleChange}
+                    value={formik.values.lastName}
+                />
+                <div className={`expandable ${formik.touched.lastName && formik.errors.lastName ? 'show' : ''}`}>
+                    {formik.errors.lastName}
+                </div>
+            </div>
+            <div className={'inputBox'}>
+                <input
+                    id="email"
+                    name="email"
+                    placeholder={'Enter your email'}
+                    type="email"
+                    onChange={formik.handleChange}
+                    value={formik.values.email}
+                />
+                <div className={`expandable ${formik.touched.email && formik.errors.email ? 'show' : ''}`}>
+                    {formik.errors.email}
+                </div>
+            </div>
+            <div className={'inputBox'}>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder={'Type your message here ...'}
+                    onChange={formik.handleChange}
+                    value={formik.values.message}
+                />
+                <div className={`expandable ${formik.touched.message && formik.errors.message ? 'show' : ''}`}>
+                    {formik.errors.message}
+                </div>
+            </div>
+
             <button type="submit">Submit</button>
         </StyledForm>
     );
