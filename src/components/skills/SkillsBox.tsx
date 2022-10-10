@@ -1,6 +1,9 @@
 import React from "react";
 import styled from 'styled-components'
 import {IconType} from "react-icons";
+//@ts-ignore
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 type ItemPropsType = {
     title: string
@@ -28,6 +31,13 @@ const StyledSkillBox = styled.div`
     font-size: 1.5em;
     line-height: 30px;
   }
+  &:hover {
+    border: 2px solid ${({theme})=>theme.colors.whiteTextColor};
+    .ItemIcon{
+      transition: transform 1s ease-in-out;
+      transform: rotate(360deg);
+    }
+  }
   @media screen and (max-width: 600px) {
     width: 235px;
   }
@@ -39,10 +49,12 @@ const StyledSkillBox = styled.div`
 export const SkillsBox = (props: PropsType) => {
     return (
         <>
-            <StyledSkillBox>
+            <StyledSkillBox data-aos="zoom-in" data-aos-easing="ease-in-out" >
                 <span className={'ItemIcon'}>{<props.item.icon/>}</span>
                 <span>{props.item.title}</span>
             </StyledSkillBox>
         </>
     )
 }
+
+AOS.init();

@@ -18,6 +18,10 @@ const StyledButtonOnTop = styled.div`
     color: ${({theme})=>theme.colors.whiteTextColor};
     font-size: 30px;
   }
+  &:hover{
+    transition: 0.5s;
+    scale: 1.1;
+  }
   @media screen and (max-width: 480px) {
     right: 20px;
   }

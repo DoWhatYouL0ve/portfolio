@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { H3 } from "../styles/common/Header3.styled";
 import {IconType} from "react-icons";
+//@ts-ignore
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export const MessengersBoxStyled = styled.div`
   width: 250px;
@@ -30,6 +33,18 @@ export const MessengersBoxStyled = styled.div`
     &:hover{
       transition: 0.5s;
       scale: 1.1;
+    }
+  }
+  &:hover {
+    .messengerIcon {
+      animation: 0.4s horizontal-shaking forwards;
+      @keyframes horizontal-shaking {
+        0% { transform: translateY(0) }
+        25% { transform: translateY(5px) }
+        50% { transform: translateY(-5px) }
+        75% { transform: translateY(5px) }
+        100% { transform: translateY(0) }
+      }
     }
   }
   @media screen and (max-width: 768px) {
@@ -87,7 +102,7 @@ type PropsType = {
 export const MessengerBox = (props: PropsType) => {
     return (
         <>
-            <MessengersBoxStyled>
+            <MessengersBoxStyled data-aos="flip-up" data-aos-easing="ease-in-out" data-aos-duration="600">
                 <div className={'messengerIcon'}>{<props.item.icon/>}</div>
                 <H3>{props.item.title}</H3>
                 <div className={'sendMessageButton'}><a href={props.item.description} target={'_blank'} rel="noopener noreferrer">Send a message</a></div>
@@ -95,3 +110,5 @@ export const MessengerBox = (props: PropsType) => {
         </>
     )
 }
+
+AOS.init();

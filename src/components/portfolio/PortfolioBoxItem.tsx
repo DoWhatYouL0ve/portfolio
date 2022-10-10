@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { StyledButton } from "../styles/common/Button.styled";
 import { H3 } from "../styles/common/Header3.styled";
 import { P } from "../styles/common/Paragraph.styled";
+//@ts-ignore
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 type ItemPropsType = {
     id: string
@@ -25,6 +28,15 @@ const PortfolioBoxItemStyled = styled.div`
   .project {
     height: 250px;
     position: relative;
+    .boxPopUp {
+      opacity: 0;
+      width: 100%;
+      height: 25px;
+      background-color: #ff9000;
+      color: white;
+      font-family: "Kaushan Script", cursive;
+      font-weight: bold;
+    }
     .demonstrationButtons {
       position: absolute;
       top: 33%;
@@ -39,6 +51,14 @@ const PortfolioBoxItemStyled = styled.div`
     color: ${({theme})=>theme.colors.primaryTextColor};
     font-family: "Kaushan Script", cursive;
     font-weight: bold;
+  }
+  &:hover {
+    transition: 1s;
+    box-shadow: rgba(255, 144, 0, 0.16) 0 1px 4px, rgb(255, 144, 0) 0 0 0 3px;
+    .boxPopUp {
+      transition: 1s;
+      opacity: 1;
+    }
   }
   @media screen and (max-width: 1024px) {
     width: 380px;
@@ -121,8 +141,9 @@ export const PortfolioBoxItem = (props: PropsType) => {
 
     return (
         <>
-            <PortfolioBoxItemStyled>
+            <PortfolioBoxItemStyled data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="600">
                 <div className={'project'} style={{background: `linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(${props.item.img})`, backgroundSize: "cover"}}>
+                    <div className={'boxPopUp'}>Check Me!</div>
                     <div className={'demonstrationButtons'}>
                         <StyledButton style={{width: '90px'}}><a href={props.item.demo} target="_blank" rel="noopener noreferrer">Demo</a></StyledButton>
                         <StyledButton style={{width: '90px'}}><a href={props.item.code} target="_blank" rel="noopener noreferrer">Code</a></StyledButton>
@@ -136,3 +157,5 @@ export const PortfolioBoxItem = (props: PropsType) => {
         </>
     )
 }
+
+AOS.init();

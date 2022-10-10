@@ -29,7 +29,7 @@ export const HeaderContainer = styled(Container)`
     transform: rotate(-5deg)
   }
 
-  .info h3{
+  .info .typedText{
     font-size: 25px;
     font-family: "Space Mono", Arial, serif;
     font-weight: 400;
@@ -45,7 +45,7 @@ export const HeaderContainer = styled(Container)`
     .info h1 {
       font-size: 40px;
     }
-    .info h3 {
+    .info .typedText {
       font-size: 23px;
     }
   }
@@ -53,7 +53,7 @@ export const HeaderContainer = styled(Container)`
     .info h1 {
       font-size: 28px;
     }
-    .info h3 {
+    .info .typedText {
       font-size: 20px;
     }
   }

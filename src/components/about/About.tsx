@@ -2,13 +2,15 @@ import React from "react";
 import {AboutContainer, AboutStyledBackground} from "./About.styled";
 import {P} from "../styles/common/Paragraph.styled";
 import {H2} from "../styles/common/Header2.styled";
-
+//@ts-ignore
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export const About = () => {
     return <>
         <AboutStyledBackground bg={'white'}>
             <AboutContainer id={'about'}>
-                <div>
+                <div data-aos="zoom-in" data-aos-easing="ease-in-out" >
                     <H2><span className={'reverseTestColor'}>A LITTLE </span><span>ABOUT ME</span></H2>
                     <P> Hello! My name is <b>William Ross</b>. Currently, I am living in Spain, Valencia.
                         I am a hardworking and goal-oriented person with a great motivation
@@ -26,3 +28,5 @@ export const About = () => {
         </AboutStyledBackground>
     </>
 }
+
+AOS.init();

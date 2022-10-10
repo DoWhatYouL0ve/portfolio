@@ -15,12 +15,21 @@ const StyledNavBar = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 1s;
   &.openedNavBar {
     left: 0;
     top: 0;
     padding: 20px;
     width: 100%;
     height: 82px;
+  }
+  @keyframes showDiv {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   nav{
     height: 40px;
@@ -31,6 +40,7 @@ const StyledNavBar = styled.div`
       font-weight: bold;
       color: ${({theme}) => theme.bg.primaryBgColor};
       margin-left: 30px;
+      animation: showDiv 3s forwards;
       span {
         font-size: 24px;
         margin-right: 5px;
@@ -96,7 +106,8 @@ export const NavBar = () => {
 
     return (
         <>
-            <StyledNavBar className={`${toggle && 'openedNavBar'}`}>
+            <StyledNavBar
+                className={`${toggle && 'openedNavBar'}`}>
                 <button onClick={onToggle}><span><FaBars/></span></button>
                 {toggle && <nav>
                     <a href={'#top'}><span><AiOutlineHome/></span>Main</a>

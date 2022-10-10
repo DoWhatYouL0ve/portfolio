@@ -3,6 +3,9 @@ import {useFormik} from 'formik';
 import styled from "styled-components";
 import * as emailjs from '@emailjs/browser'
 import * as Yup from 'yup'
+//@ts-ignore
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const StyledForm = styled.form`
   display: flex;
@@ -21,6 +24,9 @@ const StyledForm = styled.form`
       opacity: 1;
       color: ${({theme}) => theme.colors.secondaryTextColor};
     }
+    &:focus {
+      border-style: dotted dashed solid double;
+    }
   }
 
   textarea {
@@ -37,6 +43,9 @@ const StyledForm = styled.form`
     ::placeholder {
       opacity: 1;
       color: ${({theme}) => theme.colors.secondaryTextColor};
+    }
+    &:focus {
+      border-style: dotted dashed solid double;
     }
   }
 
@@ -99,7 +108,7 @@ export const ContactForm = () => {
     });
 
     return (
-        <StyledForm onSubmit={formik.handleSubmit}>
+        <StyledForm onSubmit={formik.handleSubmit} data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="600">
             <input
                 id="firstName"
                 name="firstName"
@@ -135,3 +144,5 @@ export const ContactForm = () => {
         </StyledForm>
     );
 };
+
+AOS.init();
