@@ -35,7 +35,7 @@ export const HeaderContainer = styled(Container)`
     font-weight: 400;
   }
   @media screen and (max-width: 768px) {
-    min-height: 100%;
+    min-height: 100vh;
     padding-bottom: 20px;
     .photo {
       width: 300px;
@@ -55,6 +55,19 @@ export const HeaderContainer = styled(Container)`
     }
     .info h3 {
       font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    padding: 0;
+    .photo{ 
+      margin-bottom: 50px;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .photo {
+      width: 250px;
+      height: 250px;
+      background-position: 37% 10%;
     }
   }
 `

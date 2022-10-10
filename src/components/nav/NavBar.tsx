@@ -22,7 +22,7 @@ const StyledNavBar = styled.div`
     width: 100%;
     height: 82px;
   }
-  nav {
+  nav{
     height: 40px;
     padding: 6px 0;
     a {
@@ -50,6 +50,39 @@ const StyledNavBar = styled.div`
   }
   button:hover {
     cursor: pointer;
+  }
+  @media screen and (max-width: 768px) {
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    &.openedNavBar {
+      width: 100%;
+      height: 320px;
+    }
+    nav{
+      height: 238px;
+      width: 100%;
+      min-width: 240px;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0 0;
+      align-items: center;
+      a {
+        display: inline-block;
+        font-family: "Kaushan Script", cursive;
+        font-weight: bold;
+        color: ${({theme}) => theme.bg.primaryBgColor};
+        margin: 0 0 10px 0;
+        border: 1px solid #ff9000;
+        width: 100%;
+        text-align: center;
+        span {
+          font-size: 24px;
+          margin-right: 5px;
+          vertical-align: middle;
+        }
+      }
+    }
   }
 `
 
