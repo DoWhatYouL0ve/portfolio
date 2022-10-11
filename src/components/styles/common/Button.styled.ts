@@ -20,4 +20,9 @@ export const StyledButton = styled.button`
     transition: 0.5s;
     scale: 1.1;
   }
+  :active{
+    position: relative;
+    top: 2px;
+    left: 0;
+  }
 `

@@ -1,11 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {useFormik} from 'formik';
 import styled from "styled-components";
 import * as emailjs from '@emailjs/browser'
 import * as Yup from 'yup'
-//@ts-ignore
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const StyledForm = styled.form`
   display: flex;
@@ -30,12 +28,16 @@ const StyledForm = styled.form`
   }
   .inputBox {
     position: relative;
-    .expandable.show {
+    .expandable {
       position: absolute;
-      top: 9px;
-      right: 15px;
+      top: 6px;
+      right: 5px;
       color: red;
+      font-weight: bold;
       font-size: 0.8rem;
+      padding: 5px 10px;
+      border-radius: 30px;
+      width: 150px;
     }
   }
   textarea {
@@ -45,7 +47,7 @@ const StyledForm = styled.form`
     background: transparent;
     color: ${({theme}) => theme.colors.whiteTextColor};
     border: 2px solid ${({theme}) => theme.colors.whiteTextColor};
-    border-radius: 30px;
+    border-radius: 20px;
     resize: none;
     margin-bottom: 30px;
 
@@ -57,7 +59,38 @@ const StyledForm = styled.form`
       border-style: dotted dashed solid double;
     }
   }
-
+  .confirmationWindow {
+    position: fixed;
+    bottom: 10px;
+    left: -230px;;
+    background-color: green;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0 20px 20px 0;
+    width: 230px;
+    height: 35px;
+    padding: 5px;
+    transition: 1s;
+    .closeConfirmation {
+      margin-left: 10px;
+      font-size: 1.3rem;
+      vertical-align: middle;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  @keyframes showConfDiv {
+    0% {
+      left: -230px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  .confirmationShowIt {
+    animation: showConfDiv 2s forwards;;
+  }
   button {
     width: 142px;
     background: ${({theme}) => theme.colors.whiteTextColor};
@@ -78,6 +111,11 @@ const StyledForm = styled.form`
       transition: 0.5s;
       scale: 1.1;
     }
+    :active{
+      position: relative;
+      top: 2px;
+      left: 0;
+    }
   }
   @media screen and (max-width: 768px) {
     button {
@@ -90,6 +128,7 @@ const StyledForm = styled.form`
 `
 
 export const ContactForm = () => {
+    const [confirmationShow, setConfirmationShow] = useState(false)
 
     const formik = useFormik({
         initialValues: {
@@ -111,14 +150,14 @@ export const ContactForm = () => {
             emailjs.send(`${process.env.REACT_APP_FORMIK_SERVICE_ID}`, `${process.env.REACT_APP_FORMIK_TEMPLATE_ID}`,
                 values, `${process.env.REACT_APP_FORMIK_USER_ID}`)
                 .then(() => {
-                    console.log('email sent');
+                    setConfirmationShow(true)
                 });
             resetForm()
         },
     });
 
     return (
-        <StyledForm onSubmit={formik.handleSubmit} data-aos="zoom-in-up" data-aos-easing="ease-in-out" data-aos-duration="600">
+        <StyledForm onSubmit={formik.handleSubmit}>
             <div className={'inputBox'}>
                 <input
                     id="firstName"
@@ -170,10 +209,11 @@ export const ContactForm = () => {
                     {formik.errors.message}
                 </div>
             </div>
-
-            <button type="submit">Submit</button>
+                <button type="submit">Submit</button>
+                <div className={`confirmationWindow ${confirmationShow && 'confirmationShowIt'}`}>
+                    <span>Your email has been sent!</span>
+                    <span className={'closeConfirmation'} onClick={()=>setConfirmationShow(false)}><AiOutlineCloseCircle/></span>
+                </div>
         </StyledForm>
     );
 };
-
-AOS.init();
