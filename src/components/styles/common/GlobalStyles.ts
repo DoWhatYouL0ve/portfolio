@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import img from "./mainBG.jpg";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -40,3 +41,20 @@ export const GlobalStyles = createGlobalStyle`
     display: none;
   }
 `
+
+// theme styles
+
+export const theme = {
+    colors: {
+        headingTextColor: '#000',
+        primaryTextColor: '#4d4d4d',
+        secondaryTextColor: 'rgba(255, 255, 255, 0.7)',
+        whiteTextColor: '#fff',
+
+    },
+    bg: {
+        header: `linear-gradient(rgba(255,255,255,.7), rgba(255,255,255,.7)), url(${img})`,
+        primaryBgColor: '#FF9000',
+        whiteBgColor: '#fff',
+    }
+}

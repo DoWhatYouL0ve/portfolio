@@ -167,7 +167,7 @@ export const ContactForm = () => {
                     onChange={formik.handleChange}
                     value={formik.values.firstName}
                 />
-                <div className={`expandable ${formik.touched.firstName && formik.errors.firstName ? 'show' : ''}`}>
+                <div className={`expandable ${formik.errors.firstName && formik.touched.firstName ? 'show' : ''}`}>
                     {formik.errors.firstName}
                 </div>
             </div>
@@ -179,8 +179,9 @@ export const ContactForm = () => {
                     type="text"
                     onChange={formik.handleChange}
                     value={formik.values.lastName}
+                    onBlur={formik.handleBlur}
                 />
-                <div className={`expandable ${formik.touched.lastName && formik.errors.lastName ? 'show' : ''}`}>
+                <div className={`expandable ${formik.errors.lastName && formik.touched.lastName ? 'show' : ''}`}>
                     {formik.errors.lastName}
                 </div>
             </div>
@@ -193,7 +194,7 @@ export const ContactForm = () => {
                     onChange={formik.handleChange}
                     value={formik.values.email}
                 />
-                <div className={`expandable ${formik.touched.email && formik.errors.email ? 'show' : ''}`}>
+                <div className={`expandable ${formik.errors.email && formik.touched.email ? 'show' : ''}`}>
                     {formik.errors.email}
                 </div>
             </div>
@@ -205,7 +206,7 @@ export const ContactForm = () => {
                     onChange={formik.handleChange}
                     value={formik.values.message}
                 />
-                <div className={`expandable ${formik.touched.message && formik.errors.message ? 'show' : ''}`}>
+                <div className={`expandable ${formik.errors.message && formik.touched.message ? 'show' : ''}`}>
                     {formik.errors.message}
                 </div>
             </div>
