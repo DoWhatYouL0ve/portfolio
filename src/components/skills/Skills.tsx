@@ -4,7 +4,7 @@ import { H2 } from "../styles/common/Header2.styled";
 import {SkillsContainer, TechnicalSkillsStyledBox} from "./Skills.styled";
 import { P } from "../styles/common/Paragraph.styled";
 import {H3} from "../styles/common/Header3.styled";
-import {SkillsBox} from "./SkillsBox";
+import {SkillsBox} from "./skillsBox/SkillsBox";
 import {DiReact, DiHtml5, DiCss3, DiJavascript1, DiGithubBadge, DiGit} from "react-icons/di";
 import { AiOutlineApartment, AiOutlineComment, AiOutlineFileDone, AiOutlineDeploymentUnit, AiOutlineHistory, AiOutlineLike, AiOutlineTeam, AiOutlineFileSearch, AiOutlineGlobal, AiOutlineHeart, AiOutlineRetweet, AiOutlineRise, AiOutlineSetting, AiOutlineTablet } from "react-icons/ai";
 import { SiRedux, SiStorybook, SiMaterialui , SiTypescript} from "react-icons/si";

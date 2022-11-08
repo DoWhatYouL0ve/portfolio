@@ -2,7 +2,7 @@ import React from "react";
 import {StyledBackground} from "../styles/common/Background.styled";
 import { H2 } from "../styles/common/Header2.styled";
 import {PortfolioBox, PortfolioContainer} from "./Portfolio.styled";
-import {PortfolioBoxItem} from "./PortfolioBoxItem";
+import {PortfolioBoxItem} from "./portfolioBoxItem/PortfolioBoxItem";
 import counter from "./img/counter.jpg";
 import social from "./img/social.jpg";
 import todolist from "./img/todolist.jpg";

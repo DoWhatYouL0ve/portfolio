@@ -1,10 +1,4 @@
-import React from "react";
 import styled from "styled-components";
-import { H3 } from "../styles/common/Header3.styled";
-import {IconType} from "react-icons";
-//@ts-ignore
-import AOS from 'aos'
-import 'aos/dist/aos.css'
 
 export const MessengersBoxStyled = styled.div`
   width: 250px;
@@ -87,28 +81,3 @@ export const MessengersBoxStyled = styled.div`
     }
   }
 `
-
-type ItemPropsType = {
-    id: string
-    title: string
-    description: string
-    icon: IconType
-}
-
-type PropsType = {
-    item: ItemPropsType
-}
-
-export const MessengerBox = (props: PropsType) => {
-    return (
-        <>
-            <MessengersBoxStyled data-aos="flip-up" data-aos-easing="ease-in-out" data-aos-duration="600">
-                <div className={'messengerIcon'}>{<props.item.icon/>}</div>
-                <H3>{props.item.title}</H3>
-                <div className={'sendMessageButton'}><a href={props.item.description} target={'_blank'} rel="noopener noreferrer">Send a message</a></div>
-            </MessengersBoxStyled>
-        </>
-    )
-}
-
-AOS.init();

@@ -1,5 +1,5 @@
 import React from "react";
-import photo from './cv.jpg'
+import photo from './img/cv.jpg'
 import {StyledBackground} from "../styles/common/Background.styled";
 import {HeaderContainer} from "./Header.styled";
 import {StyledButton} from "../styles/common/Button.styled";
