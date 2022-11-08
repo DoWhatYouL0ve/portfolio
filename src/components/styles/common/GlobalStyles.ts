@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import img from "./mainBG.jpg";
+import img from "./../../header/img/mainBG.jpg";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  h1,h2,h3,h4,h5,h6,p {
+  h1,h2,h3,h4,h5,h6,p { 
     margin: 0;
     padding: 0;
     font-family: "Space Mono", Arial, serif;
