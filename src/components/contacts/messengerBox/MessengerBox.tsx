@@ -1,10 +1,10 @@
 import React from "react";
-import { H3 } from "../../styles/common/Header3.styled";
+import { H3 } from "../../../styles/Header3.styled";
 import {IconType} from "react-icons";
 //@ts-ignore
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { MessengersBoxStyled } from "./styledMessengerBox";
+import { MessengersBoxStyled } from "./styles/styledMessengerBox";
 
 type ItemPropsType = {
     id: string

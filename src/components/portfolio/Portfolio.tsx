@@ -1,12 +1,12 @@
 import React from "react";
-import {StyledBackground} from "../styles/common/Background.styled";
-import { H2 } from "../styles/common/Header2.styled";
-import {PortfolioBox, PortfolioContainer} from "./Portfolio.styled";
+import {StyledBackground} from "../../styles/Background.styled";
+import { H2 } from "../../styles/Header2.styled";
+import {PortfolioBox, PortfolioContainer} from "./styles/styledPortfolio";
 import {PortfolioBoxItem} from "./portfolioBoxItem/PortfolioBoxItem";
-import weather from "./img/weather.png";
-import social from "./img/social.jpg";
-import todolist from "./img/todolist.jpg";
-import cards from "./img/cards.jpg";
+import weather from "../../assets/img/portfolio/weather.png";
+import social from "../../assets/img/portfolio/social.jpg";
+import todolist from "../../assets/img/portfolio/todolist.jpg";
+import cards from "../../assets/img/portfolio/cards.jpg";
 
 export const Portfolio = () => {
 

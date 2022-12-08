@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import {Container} from "../styles/common/Container.styled";
-import {StyledBackground} from "../styles/common/Background.styled";
+import {Container} from "../../../styles/Container.styled";
+import {StyledBackground} from "../../../styles/Background.styled";
 
 export const FooterStyledBackground = styled(StyledBackground)`
   min-height: 70px;

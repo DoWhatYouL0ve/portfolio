@@ -3,7 +3,7 @@ import {useFormik} from 'formik';
 import * as emailjs from '@emailjs/browser'
 import * as Yup from 'yup'
 import { AiOutlineCloseCircle } from "react-icons/ai";
-import { StyledForm } from './styledContactForm';
+import { StyledForm } from './styles/styledContactForm';
 
 export const ContactForm = () => {
     const [confirmationShow, setConfirmationShow] = useState(false)

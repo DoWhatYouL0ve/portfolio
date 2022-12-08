@@ -4,7 +4,7 @@ export const StyledSkillBox = styled.div`
   width: 250px;
   height: 50px;
   padding: 10px;
-  margin-bottom: 20px;
+  margin: 45px 10px;
   border: 1px solid ${({theme})=>theme.colors.whiteTextColor};
   color: ${({theme})=>theme.colors.whiteTextColor};
   display: flex;
@@ -24,10 +24,15 @@ export const StyledSkillBox = styled.div`
       transform: rotate(360deg);
     }
   }
-  @media screen and (max-width: 600px) {
-    width: 235px;
+  @media screen and (max-width: 1080px) {
+    width: 200px;
+  }
+  @media screen and (max-width: 879px) {
+    width: 45%;
+    margin: 20px 10px;
   }
   @media screen and (max-width: 480px) {
-    margin: 0 auto;
+    width: 235px;
+    margin: 5px auto;
   }
 `

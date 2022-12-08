@@ -1,11 +1,11 @@
 import React from "react";
-import { StyledButton } from "../../styles/common/Button.styled";
-import { H3 } from "../../styles/common/Header3.styled";
-import { P } from "../../styles/common/Paragraph.styled";
+import { StyledButton } from "../../../styles/Button.styled";
+import { H3 } from "../../../styles/Header3.styled";
+import { P } from "../../../styles/Paragraph.styled";
 //@ts-ignore
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { PortfolioBoxItemStyled } from "./styledPortfolioBoxItem";
+import { PortfolioBoxItemStyled } from "./styles/styledPortfolioBoxItem";
 
 type ItemPropsType = {
     id: string

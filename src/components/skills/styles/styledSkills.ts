@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {Container} from "../styles/common/Container.styled";
+import {Container} from "../../../styles/Container.styled";
 
 
 export const SkillsContainer = styled(Container)`

@@ -3,7 +3,7 @@ import {IconType} from "react-icons";
 //@ts-ignore
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { StyledSkillBox } from "./styledSkillsBox";
+import { StyledSkillBox } from "./styles/styledSkillsBox";
 
 type ItemPropsType = {
     title: string

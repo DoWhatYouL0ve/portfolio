@@ -1,10 +1,10 @@
 import React from "react";
-import photo from './img/cv.jpg'
-import {StyledBackground} from "../styles/common/Background.styled";
-import {HeaderContainer} from "./Header.styled";
-import {StyledButton} from "../styles/common/Button.styled";
+import photo from '../../assets/img/header/cv.jpg'
+import {StyledBackground} from "../../styles/Background.styled";
+import {HeaderContainer} from "./styles/styledHeader";
+import {StyledButton} from "../../styles/Button.styled";
 //@ts-ignore
-import cv from './cv.pdf'
+import cv from '../../assets/cv.pdf'
 import Typed from 'react-typed';
 //@ts-ignore
 import AOS from 'aos'

@@ -1,14 +1,7 @@
-import React from 'react';
-import {Header} from "./components/header/Header";
-import {About} from "./components/about/About";
-import {Contacts} from "./components/contacts/Contacts";
-import {Footer} from "./components/footer/Footer";
-import {Skills} from "./components/skills/Skills";
-import {Portfolio} from './components/portfolio/Portfolio';
-import {GlobalStyles, theme} from "./components/styles/common/GlobalStyles";
+import {GlobalStyles, theme} from "./styles/GlobalStyles";
 import {ThemeProvider} from "styled-components";
-import {ButtonOnTop} from "./components/buttonOnTop/ButtonOnTop";
-import {NavBar} from "./components/nav/NavBar";
+
+import {NavBar, ButtonOnTop, Portfolio, Skills, Footer, Contacts, About, Header} from './components'
 
 function App() {
     return (

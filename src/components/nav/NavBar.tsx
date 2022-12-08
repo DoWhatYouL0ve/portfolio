@@ -1,9 +1,7 @@
 import React, {useState} from 'react'
 import { FaBars } from "react-icons/fa";
 import { AiOutlineHome, AiOutlineMessage, AiOutlinePicture, AiOutlineMail, AiOutlineSetting } from "react-icons/ai";
-import { StyledNavBar } from './styledNavBar';
-
-
+import { StyledNavBar } from './styles/styledNavBar';
 
 export const NavBar = () => {
 

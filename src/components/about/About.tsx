@@ -1,7 +1,7 @@
 import React from "react";
-import {AboutContainer, AboutStyledBackground} from "./About.styled";
-import {P} from "../styles/common/Paragraph.styled";
-import {H2} from "../styles/common/Header2.styled";
+import {AboutContainer, AboutStyledBackground} from "./styles/styledAbout";
+import {P} from "../../styles/Paragraph.styled";
+import {H2} from "../../styles/Header2.styled";
 //@ts-ignore
 import AOS from 'aos'
 import 'aos/dist/aos.css'

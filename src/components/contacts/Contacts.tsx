@@ -1,7 +1,7 @@
 import React from "react";
-import {StyledBackground} from "../styles/common/Background.styled";
-import {ContactsContainer, ContactsFormContainer, ContactsMessengers, ContactsEmail} from "./Contacts.styled";
-import {H2} from "../styles/common/Header2.styled";
+import {StyledBackground} from "../../styles/Background.styled";
+import {ContactsContainer, ContactsFormContainer, ContactsMessengers, ContactsEmail} from "./styles/styledContacts";
+import {H2} from "../../styles/Header2.styled";
 import {MessengerBox} from './messengerBox/MessengerBox'
 import { AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
 import { RiMessengerLine } from "react-icons/ri";

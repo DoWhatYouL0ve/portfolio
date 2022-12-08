@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
-import { StyledButtonOnTop } from "./styledButtonOnTop";
+import { StyledButtonOnTop } from "./styles/styledButtonOnTop";
 
 export const ButtonOnTop = () => {
 
